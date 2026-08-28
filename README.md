@@ -9,6 +9,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-00f5d4?style=for-the-badge&logo=open-source-initiative&logoColor=black" alt="License: MIT" /></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-f72585?style=for-the-badge&logo=github" alt="PRs Welcome" /></a>
   <img src="https://img.shields.io/badge/Focus-mNGS%20%7C%20AMR%20%7C%20WBE%20%7C%20ML-7209b7?style=for-the-badge" alt="Focus Areas" />
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 ---
