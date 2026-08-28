@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="40%" stop-color="#0b132b" />
+      <stop offset="80%" stop-color="#111d42" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <!-- Bio Glowing Gradients -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="50%" stop-color="#00bbf9" />
+      <stop offset="100%" stop-color="#4361ee" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7209b7" />
+      <stop offset="50%" stop-color="#f72585" />
+      <stop offset="100%" stop-color="#4cc9f0" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="40%" stop-color="#e0fbfc" />
+      <stop offset="80%" stop-color="#98f5e1" />
+      <stop offset="100%" stop-color="#00f5d4" />
+    </linearGradient>
+
+    <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#00bbf9" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .pulse-circle {
+        transform-origin: 1020px 210px;
+        animation: pulse 3.5s ease-in-out infinite;
+      }
+      .pulse-circle-2 {
+        transform-origin: 1020px 210px;
+        animation: pulse 3.5s ease-in-out infinite 1.2s;
+      }
+      .pulse-circle-3 {
+        transform-origin: 1020px 210px;
+        animation: pulse 3.5s ease-in-out infinite 2.4s;
+      }
+      .radar-sweep {
+        transform-origin: 1020px 210px;
+        animation: rotateRadar 7s linear infinite;
+      }
+      .float-particle {
+        animation: float 4s ease-in-out infinite alternate;
+      }
+      .float-particle-reverse {
+        animation: floatReverse 5s ease-in-out infinite alternate;
+      }
+      .dna-wave {
+        animation: waveFlow 6s ease-in-out infinite alternate;
+      }
+
+      @keyframes rotateRadar {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulse {
+        0% { transform: scale(0.6); opacity: 0.8; }
+        50% { opacity: 0.4; }
+        100% { transform: scale(1.4); opacity: 0; }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px) translateX(0px); }
+        100% { transform: translateY(-12px) translateX(6px); }
+      }
+      @keyframes floatReverse {
+        0% { transform: translateY(0px) translateX(0px); }
+        100% { transform: translateY(14px) translateX(-8px); }
+      }
+      @keyframes waveFlow {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(8px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)" rx="16" />
+
+  <!-- Subtle Grid Pattern -->
+  <g stroke="#1b2a4e" stroke-width="0.8" stroke-opacity="0.35">
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+    <line x1="900" y1="0" x2="900" y2="420" />
+    <line x1="1050" y1="0" x2="1050" y2="420" />
+  </g>
+
+  <!-- Surveillance Radar & Biosurveillance Hub Visualization (Right Side) -->
+  <g>
+    <!-- Background Glow -->
+    <circle cx="1020" cy="210" r="160" fill="url(#radarGlow)" />
+    
+    <!-- Concentric Radar Rings -->
+    <circle class="pulse-circle" cx="1020" cy="210" r="120" fill="none" stroke="#00f5d4" stroke-width="1.5" stroke-opacity="0.5" />
+    <circle class="pulse-circle-2" cx="1020" cy="210" r="85" fill="none" stroke="#00bbf9" stroke-width="1.5" stroke-opacity="0.6" />
+    <circle class="pulse-circle-3" cx="1020" cy="210" r="50" fill="none" stroke="#f72585" stroke-width="1.5" stroke-opacity="0.7" />
+
+    <circle cx="1020" cy="210" r="150" fill="none" stroke="#1e3a5f" stroke-width="1.2" stroke-dasharray="4 6" />
+    <circle cx="1020" cy="210" r="110" fill="none" stroke="#254b77" stroke-width="1" />
+    <circle cx="1020" cy="210" r="70" fill="none" stroke="#2a5c91" stroke-width="1" />
+    <circle cx="1020" cy="210" r="30" fill="none" stroke="#00f5d4" stroke-width="1.5" />
+    <circle cx="1020" cy="210" r="6" fill="#00f5d4" filter="url(#glow)" />
+
+    <!-- Radar Crosshairs -->
+    <line x1="860" y1="210" x2="1180" y2="210" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 4" />
+    <line x1="1020" y1="50" x2="1020" y2="370" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="2 4" />
+
+    <!-- Rotating Radar Sweep -->
+    <g class="radar-sweep">
+      <path d="M 1020 210 L 1170 210 A 150 150 0 0 0 1020 60 Z" fill="url(#cyanGlow)" fill-opacity="0.18" />
+      <line x1="1020" y1="210" x2="1170" y2="210" stroke="#00f5d4" stroke-width="2" filter="url(#subtleGlow)" />
+    </g>
+
+    <!-- Pathogen / Target Blips -->
+    <g class="float-particle">
+      <circle cx="970" cy="150" r="4.5" fill="#f72585" filter="url(#subtleGlow)" />
+      <text x="980" y="146" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#f72585">SARS-CoV-2</text>
+      <circle cx="970" cy="150" r="10" fill="none" stroke="#f72585" stroke-width="0.8" opacity="0.6">
+        <animate attributeName="r" values="4;14;4" dur="2.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0;0.8" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <g class="float-particle-reverse">
+      <circle cx="1090" cy="270" r="4" fill="#00f5d4" filter="url(#subtleGlow)" />
+      <text x="1100" y="274" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#00f5d4">AMR: blaCTX-M</text>
+    </g>
+
+    <g class="float-particle">
+      <circle cx="1070" cy="130" r="3.5" fill="#ffd166" filter="url(#subtleGlow)" />
+      <text x="1080" y="126" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#ffd166">WBE Cluster</text>
+    </g>
+
+    <g class="float-particle-reverse">
+      <circle cx="940" cy="280" r="3.5" fill="#7209b7" filter="url(#subtleGlow)" />
+      <text x="875" y="295" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#b5179e">Novel Contig</text>
+    </g>
+  </g>
+
+  <!-- Metagenomic DNA Wave Graphics -->
+  <g class="dna-wave" opacity="0.85">
+    <path d="M 40 365 Q 120 325 200 365 T 360 365 T 520 365 T 680 365 T 840 365" fill="none" stroke="#00f5d4" stroke-width="2.5" stroke-opacity="0.4" />
+    <path d="M 40 365 Q 120 405 200 365 T 360 365 T 520 365 T 680 365 T 840 365" fill="none" stroke="#f72585" stroke-width="2.5" stroke-opacity="0.4" />
+    
+    <line x1="120" y1="335" x2="120" y2="395" stroke="#00bbf9" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="280" y1="335" x2="280" y2="395" stroke="#00bbf9" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="440" y1="335" x2="440" y2="395" stroke="#00bbf9" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="600" y1="335" x2="600" y2="395" stroke="#00bbf9" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="760" y1="335" x2="760" y2="395" stroke="#00bbf9" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="2 2" />
+  </g>
+
+  <!-- Header Category Badge -->
+  <g transform="translate(60, 48)">
+    <rect width="320" height="32" rx="16" fill="#162244" stroke="#00f5d4" stroke-width="1" stroke-opacity="0.6" />
+    <circle cx="16" cy="16" r="6" fill="#00f5d4" filter="url(#subtleGlow)">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="32" y="21" font-family="'Segoe UI', Roboto, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#00f5d4" letter-spacing="1.5">BIOINFORMATICS &amp; SURVEILLANCE</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="60" y="128" font-family="'Segoe UI', Roboto, -apple-system, 'Helvetica Neue', sans-serif" font-size="36" font-weight="900" fill="url(#textGrad)" letter-spacing="0.5" filter="url(#subtleGlow)">
+    Awesome Metagenomic Biosurveillance
+  </text>
+  <text x="60" y="173" font-family="'Segoe UI', Roboto, -apple-system, 'Helvetica Neue', sans-serif" font-size="32" font-weight="800" fill="#ffffff" letter-spacing="0.5">
+    Analyst Interview Q&amp;A
+  </text>
+
+  <!-- Subtitle / Tagline -->
+  <text x="60" y="218" font-family="'Segoe UI', Roboto, -apple-system, sans-serif" font-size="16" font-weight="400" fill="#a0aec0" letter-spacing="0.2">
+    The definitive technical interview prep &amp; knowledge repository for
+  </text>
+  <text x="60" y="243" font-family="'Segoe UI', Roboto, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#4cc9f0">
+    mNGS, Pathogen Detection, AMR Tracking, Wastewater Epidemiology &amp; Biosecurity
+  </text>
+
+  <!-- Feature Pills / Badges in Banner -->
+  <g transform="translate(60, 278)">
+    <g transform="translate(0, 0)">
+      <rect width="130" height="34" rx="8" fill="#132347" stroke="#4361ee" stroke-width="1.2" />
+      <text x="14" y="22" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">🧬 12 Modules</text>
+    </g>
+
+    <g transform="translate(142, 0)">
+      <rect width="165" height="34" rx="8" fill="#132347" stroke="#7209b7" stroke-width="1.2" />
+      <text x="14" y="22" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#e2e8f0">🧪 150+ Questions</text>
+    </g>
+
+    <g transform="translate(319, 0)">
+      <rect width="160" height="34" rx="8" fill="#132347" stroke="#00f5d4" stroke-width="1.2" />
+      <text x="14" y="22" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#00f5d4">🔬 Case Studies</text>
+    </g>
+
+    <g transform="translate(491, 0)">
+      <rect width="190" height="34" rx="8" fill="#132347" stroke="#f72585" stroke-width="1.2" />
+      <text x="14" y="22" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#f72585">🛡️ Biosecurity &amp; ML</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Border Line -->
+  <rect x="0" y="414" width="1200" height="6" fill="url(#accentGrad)" rx="3" />
+</svg>
